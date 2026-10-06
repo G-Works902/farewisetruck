@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FareWise Truck Privacy Policy / プライバシーポリシー</title>
+<style>
+  :root { --ink:#1c2530; --accent:#1e50a0; --line:#d4e0ec; --soft:#5a6b7c; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI","Meiryo","Yu Gothic UI",system-ui,sans-serif;
+    color: var(--ink); line-height: 1.75; margin: 0;
+    background: #f4f8fc;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 28px 20px 60px; }
+  header { background: #17223b; color: #fff; padding: 26px 20px; }
+  header .inner { max-width: 860px; margin: 0 auto; }
+  header h1 { margin: 0; font-size: 20pt; }
+  header .sub { margin-top: 6px; color: #c9d6ea; font-size: 10.5pt; }
+  h2 {
+    font-size: 14pt; color: var(--accent); margin: 34px 0 10px;
+    border-bottom: 2px solid var(--line); padding-bottom: 6px;
+  }
+  h3 { font-size: 11.5pt; color: var(--accent); margin: 20px 0 6px; }
+  p, li { font-size: 10.5pt; }
+  ul { padding-left: 1.3em; }
+  code {
+    background: #e9eff6; padding: 1px 6px; border-radius: 3px;
+    font-family: Consolas, monospace; font-size: 10pt;
+    overflow-wrap: anywhere;
+  }
+  .card {
+    background: #fff; border: 1px solid var(--line); border-radius: 8px;
+    padding: 4px 24px 22px; margin-top: 22px;
+  }
+  .note {
+    background: #eaf7ee; border: 1px solid #8cc89e; border-radius: 6px;
+    padding: 10px 14px; margin: 14px 0; font-size: 10.5pt;
+  }
+  footer { color: var(--soft); font-size: 9.5pt; margin-top: 34px; text-align: center; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <h1>FareWise Truck &mdash; プライバシーポリシー / Privacy Policy</h1>
+    <div class="sub">最終更新 / Last updated: 2026-10-06</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<div class="card">
+<h2>日本語</h2>
+
+<h3>はじめに</h3>
+<p>
+FareWise Truck（以下「本アプリ」）は、G-Works が提供する Windows デスクトップ アプリケーションです。
+国土交通省告示「一般貨物自動車運送事業に係る標準的な運賃」に基づく運賃・料金・実費を計算し、運賃計算書を作ります。
+本ポリシーは、本アプリが利用者の情報をどのように扱うかを説明します。
+</p>
+
+<div class="note">
+<strong>本アプリはインターネット通信を一切行いません。</strong>
+利用者の情報を収集・送信することはなく、外部のサーバーへ接続することもありません。
+</div>
+
+<h3>1. 収集する情報</h3>
+<p><strong>本アプリは個人情報を収集しません。</strong>次のいずれも行いません。</p>
+<ul>
+  <li>利用者の氏名・住所・メールアドレス等の個人情報の収集</li>
+  <li>利用状況の記録、アクセス解析、クラッシュレポートの送信</li>
+  <li>広告の表示、広告識別子の取得</li>
+  <li>アカウント登録、ログイン</li>
+</ul>
+
+<h3>2. 端末内に保存されるもの</h3>
+<p>本アプリが端末内に書き込むのは、次のものだけです。いずれも利用者の端末から外へ出ません。</p>
+<ul>
+  <li><strong>保存した見積</strong>（見積名、荷主名、備考、区間の距離・時間、車種、入力した金額などの計算条件）。
+      <code>%APPDATA%\FareWiseTruck\quotes.db</code> に保存します。荷主名などは利用者が入力したものだけです。</li>
+  <li><strong>設定</strong>（運賃料金適用方の率・燃費・基準積載率、既定の運輸局・車種、選んだ運賃表）。
+      <code>%APPDATA%\FareWiseTruck\settings.json</code> に保存します。</li>
+  <li><strong>運賃計算書</strong>（印刷用の HTML）。<code>%APPDATA%\FareWiseTruck\reports\</code> に作り、利用者のブラウザーで開きます。</li>
+  <li><strong>利用者が追加した運賃表</strong>（JSON）。<code>%APPDATA%\FareWiseTruck\tariff\</code> に利用者が置いたものを読み込みます。</li>
+  <li><strong>利用者が保存を指示したファイル</strong>（見積の CSV）。保存先は利用者が選びます。</li>
+  <li><strong>クリップボード</strong>。バージョン情報の［情報をコピー］を押したときだけ、
+      アプリの版・Windows の版・運賃表の告示番号・データの保存先をクリップボードに入れます。</li>
+</ul>
+<p>
+Microsoft Store 版では、Windows の仕組みにより、上のフォルダーの実際の保存先が
+アプリ専用のフォルダー（<code>%LOCALAPPDATA%\Packages\</code> の下）に置き換わる場合があります。
+</p>
+
+<h3>3. 端末から読み取るもの</h3>
+<p>
+画面の配色を合わせるために、Windows のダーク／ライトのモードの設定を読み取ります。
+読み取った値は表示を決めるためだけに使い、保存・送信しません。
+</p>
+
+<h3>4. ネットワーク・オンラインサービス</h3>
+<p>
+本アプリはネットワーク通信機能を持ちません。パッケージが要求する機能も
+<code>runFullTrust</code>（Win32 デスクトップ アプリに必須）のみです。
+手引き書と運賃計算書は端末内のファイルをブラウザーで開くもので、通信は行いません。
+メニューの「標準的な運賃の資料（国土交通省）を開く」を選んだときだけ、
+利用者のブラウザーが国土交通省のウェブページを開きます。その通信はブラウザーが行い、本アプリの情報は送られません。
+</p>
+
+<h3>5. 第三者への提供</h3>
+<p>提供する情報がないため、第三者への提供もありません。</p>
+
+<h3>6. データの保存期間と削除</h3>
+<p>
+見積と設定は、利用者が削除するまで端末に残ります。
+見積は本アプリの「保存した見積」の一覧で 1 件ずつ削除できます。
+<code>%APPDATA%\FareWiseTruck\</code> フォルダーを削除すれば、すべての見積・設定・運賃計算書が消えます
+（Microsoft Store 版で保存先がアプリ専用のフォルダーに置き換わっている場合は、アンインストールで消えます）。
+利用者が保存した CSV ファイルは、アプリをアンインストールしても残ります。
+</p>
+
+<h3>7. セキュリティ</h3>
+<p>
+本アプリは情報を送信しないため、通信経路上の漏えいは発生しません。
+端末内のファイルの保護は、Windows のアクセス権と利用者の管理に依ります。
+見積に荷主名などを入力した場合は、端末とバックアップの管理に注意してください。
+</p>
+
+<h3>8. 子どものプライバシー</h3>
+<p>
+本アプリは貨物自動車運送事業者向けの業務用ツールで、子どもを対象としていません。
+いかなる年齢の利用者からも情報を収集しません。
+</p>
+
+<h3>9. 本ポリシーの変更</h3>
+<p>
+本ポリシーは必要に応じて改定することがあります。
+最新版は <a href="https://g-works902.github.io/farewisetruck/">https://g-works902.github.io/farewisetruck/</a> に掲載します。
+</p>
+
+<h3>10. お問い合わせ</h3>
+<p>本ポリシーや本アプリに関するお問い合わせ先： G.Works.902@gmail.com</p>
+</div>
+
+<div class="card">
+<h2>English</h2>
+
+<h3>Introduction</h3>
+<p>
+FareWise Truck ("the App") is a Windows desktop application published by G-Works.
+It calculates freight rates, charges and expenses based on the Japanese Ministry of Land, Infrastructure,
+Transport and Tourism notice on standard trucking rates, and produces a rate statement.
+This policy explains how the App handles your information.
+</p>
+
+<div class="note">
+<strong>The App makes no network connections at all.</strong>
+It does not collect or transmit any information about you, and it never contacts
+an external server.
+</div>
+
+<h3>1. Information we collect</h3>
+<p><strong>The App collects no personal information.</strong> It does not:</p>
+<ul>
+  <li>collect your name, address, e-mail address or other personal data</li>
+  <li>record usage, run analytics, or send crash reports</li>
+  <li>display advertising or read advertising identifiers</li>
+  <li>require an account or sign-in</li>
+</ul>
+
+<h3>2. What is stored on your device</h3>
+<p>The App writes only the following, and none of it leaves your device.</p>
+<ul>
+  <li><strong>Saved quotes</strong> (quote title, customer name, notes, distances and times, vehicle class,
+      amounts you enter and other calculation conditions), at
+      <code>%APPDATA%\FareWiseTruck\quotes.db</code>. Customer names are only what you type in.</li>
+  <li><strong>Settings</strong> (your own rates, fuel economy, load factor, default region and vehicle,
+      selected tariff), at <code>%APPDATA%\FareWiseTruck\settings.json</code>.</li>
+  <li><strong>Rate statements</strong> (printable HTML), created in <code>%APPDATA%\FareWiseTruck\reports\</code>
+      and opened in your browser.</li>
+  <li><strong>Tariffs you add</strong> (JSON files you place in <code>%APPDATA%\FareWiseTruck\tariff\</code>).</li>
+  <li><strong>Files you ask it to save</strong> (quotes as CSV). You choose where they go.</li>
+  <li><strong>The clipboard</strong>, only when you press Copy information in the About box
+      (App version, Windows version, tariff notice numbers and the data folder).</li>
+</ul>
+<p>
+In the Microsoft Store version, Windows may redirect the folder above to a folder private to the App
+(under <code>%LOCALAPPDATA%\Packages\</code>).
+</p>
+
+<h3>3. What is read from your device</h3>
+<p>
+To match your system, the App reads the Windows dark or light mode setting. This value is used only
+to choose the colors on screen and is neither stored nor transmitted.
+</p>
+
+<h3>4. Network and online services</h3>
+<p>
+The App has no networking features. The only capability the package declares is
+<code>runFullTrust</code>, which is required for Win32 desktop applications.
+The manual and rate statements are files on your device opened in your browser without any network access.
+Only when you choose the menu item that opens the Ministry's materials does your browser open the Ministry's
+web page; that connection is made by your browser and carries no information from the App.
+</p>
+
+<h3>5. Sharing with third parties</h3>
+<p>There is no information to share, so nothing is shared.</p>
+
+<h3>6. Data retention and deletion</h3>
+<p>
+Quotes and settings remain on your device until you delete them. You can delete quotes one at a time
+from the saved-quotes list in the App. Removing the <code>%APPDATA%\FareWiseTruck\</code> folder deletes all
+quotes, settings and rate statements (if the Store version redirected the folder, uninstalling the App deletes it).
+CSV files you saved remain after the App is uninstalled.
+</p>
+
+<h3>7. Security</h3>
+<p>
+Because the App transmits nothing, there is no exposure in transit. Protection of files on your device
+relies on Windows permissions and your own management. If you enter customer names in quotes, take care
+with the device and its backups.
+</p>
+
+<h3>8. Children's privacy</h3>
+<p>
+The App is a business tool for trucking companies and is not directed at children.
+It collects no information from users of any age.
+</p>
+
+<h3>9. Changes to this policy</h3>
+<p>
+We may update this policy as needed. The latest version will be posted at
+<a href="https://g-works902.github.io/farewisetruck/">https://g-works902.github.io/farewisetruck/</a>.
+</p>
+
+<h3>10. Contact</h3>
+<p>For questions about this policy or the App: G.Works.902@gmail.com</p>
+</div>
+
+<footer>&copy; 2026 G-Works &middot; FareWise Truck</footer>
+
+</div>
+</body>
+</html>
