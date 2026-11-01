@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FareWise Truck Privacy Policy / プライバシーポリシー</title>
+<title>Farewise Truck Privacy Policy / プライバシーポリシー</title>
 <style>
   :root { --ink:#1c2530; --accent:#1e50a0; --line:#d4e0ec; --soft:#5a6b7c; }
   * { box-sizing: border-box; }
@@ -44,8 +44,8 @@
 
 <header>
   <div class="inner">
-    <h1>FareWise Truck &mdash; プライバシーポリシー / Privacy Policy</h1>
-    <div class="sub">最終更新 / Last updated: 2026-10-06</div>
+    <h1>Farewise Truck &mdash; プライバシーポリシー / Privacy Policy</h1>
+    <div class="sub">最終更新 / Last updated: 2026-11-01</div>
   </div>
 </header>
 
@@ -56,7 +56,7 @@
 
 <h3>はじめに</h3>
 <p>
-FareWise Truck（以下「本アプリ」）は、G-Works が提供する Windows デスクトップ アプリケーションです。
+Farewise Truck（以下「本アプリ」）は、G-Works が提供する Windows デスクトップ アプリケーションです。
 国土交通省告示「一般貨物自動車運送事業に係る標準的な運賃」に基づく運賃・料金・実費を計算し、運賃計算書を作ります。
 本ポリシーは、本アプリが利用者の情報をどのように扱うかを説明します。
 </p>
@@ -78,15 +78,21 @@ FareWise Truck（以下「本アプリ」）は、G-Works が提供する Window
 <h3>2. 端末内に保存されるもの</h3>
 <p>本アプリが端末内に書き込むのは、次のものだけです。いずれも利用者の端末から外へ出ません。</p>
 <ul>
-  <li><strong>保存した見積</strong>（見積名、荷主名、備考、区間の距離・時間、車種、入力した金額などの計算条件）。
+  <li><strong>保存した見積</strong>（見積名、荷主名、備考、区間の地点名・距離・時間、車種、台数、運送日・品名・積込地・取卸地、入力した金額などの計算条件）と、
+      利用者が記録した<strong>軽油価格</strong>（月・価格・メモ）。
       <code>%APPDATA%\FareWiseTruck\quotes.db</code> に保存します。荷主名などは利用者が入力したものだけです。</li>
-  <li><strong>設定</strong>（運賃料金適用方の率・燃費・基準積載率、既定の運輸局・車種、選んだ運賃表）。
+  <li><strong>設定</strong>（運賃料金適用方の率・燃費・基準積載率、既定の運輸局・車種、選んだ運賃表、
+      利用者が入力した自社の名称・住所・電話番号・登録番号・支払方法）。
       <code>%APPDATA%\FareWiseTruck\settings.json</code> に保存します。</li>
-  <li><strong>運賃計算書</strong>（印刷用の HTML）。<code>%APPDATA%\FareWiseTruck\reports\</code> に作り、利用者のブラウザーで開きます。</li>
+  <li><strong>前回の入力内容</strong>（荷主向け運賃表の条件は <code>ratetable.json</code>、運送契約の書面の種類・支払方法・相手方の名称と住所などは <code>contract.json</code>）と、
+      <strong>窓の大きさ・位置</strong>（<code>window.ini</code>）。いずれも <code>%APPDATA%\FareWiseTruck\</code> に保存します。</li>
+  <li><strong>運賃計算書・荷主向け運賃表・運送契約の書面</strong>（印刷用の HTML）。<code>%APPDATA%\FareWiseTruck\reports\</code> に作り、利用者のブラウザーで開きます。
+      交付した書面の写しを残す設定にしたときは、写しを <code>%APPDATA%\FareWiseTruck\contracts\</code> に保存します。</li>
   <li><strong>利用者が追加した運賃表</strong>（JSON）。<code>%APPDATA%\FareWiseTruck\tariff\</code> に利用者が置いたものを読み込みます。</li>
-  <li><strong>利用者が保存を指示したファイル</strong>（見積の CSV）。保存先は利用者が選びます。</li>
-  <li><strong>クリップボード</strong>。バージョン情報の［情報をコピー］を押したときだけ、
-      アプリの版・Windows の版・運賃表の告示番号・データの保存先をクリップボードに入れます。</li>
+  <li><strong>利用者が保存を指示したファイル</strong>（見積・運賃表・一括再計算の CSV、運賃計算書・運賃表・運送契約の書面の PDF）。保存先は利用者が選びます。</li>
+  <li><strong>クリップボード</strong>。バージョン情報の［情報をコピー］を押したときは、
+      アプリの版・Windows の版・運賃表の告示番号・データの保存先を、運送契約の書面の［メール本文をコピー］を押したときは書面の文面を、クリップボードに入れます。
+      本アプリがメールを送ることはありません。</li>
 </ul>
 <p>
 Microsoft Store 版では、Windows の仕組みにより、上のフォルダーの実際の保存先が
@@ -104,6 +110,8 @@ Microsoft Store 版では、Windows の仕組みにより、上のフォルダ�
 本アプリはネットワーク通信機能を持ちません。パッケージが要求する機能も
 <code>runFullTrust</code>（Win32 デスクトップ アプリに必須）のみです。
 手引き書と運賃計算書は端末内のファイルをブラウザーで開くもので、通信は行いません。
+PDF を作るときは、Windows に入っている Microsoft Edge を画面に出さずに起動し、端末内の HTML ファイルを PDF に印刷させます。
+このとき使う Edge のプロファイルは一時フォルダーに毎回新しく作るもので、利用者の Edge の設定・履歴には触れず、通信も行いません。
 メニューの「標準的な運賃の資料（国土交通省）を開く」を選んだときだけ、
 利用者のブラウザーが国土交通省のウェブページを開きます。その通信はブラウザーが行い、本アプリの情報は送られません。
 </p>
@@ -148,7 +156,7 @@ Microsoft Store 版では、Windows の仕組みにより、上のフォルダ�
 
 <h3>Introduction</h3>
 <p>
-FareWise Truck ("the App") is a Windows desktop application published by G-Works.
+Farewise Truck ("the App") is a Windows desktop application published by G-Works.
 It calculates freight rates, charges and expenses based on the Japanese Ministry of Land, Infrastructure,
 Transport and Tourism notice on standard trucking rates, and produces a rate statement.
 This policy explains how the App handles your information.
@@ -172,17 +180,25 @@ an external server.
 <h3>2. What is stored on your device</h3>
 <p>The App writes only the following, and none of it leaves your device.</p>
 <ul>
-  <li><strong>Saved quotes</strong> (quote title, customer name, notes, distances and times, vehicle class,
-      amounts you enter and other calculation conditions), at
+  <li><strong>Saved quotes</strong> (quote title, customer name, notes, stop names, distances and times, vehicle class,
+      number of vehicles, transport date, goods, loading and unloading places, amounts you enter and other calculation
+      conditions) and the <strong>diesel prices</strong> you record (month, price, note), at
       <code>%APPDATA%\FareWiseTruck\quotes.db</code>. Customer names are only what you type in.</li>
   <li><strong>Settings</strong> (your own rates, fuel economy, load factor, default region and vehicle,
-      selected tariff), at <code>%APPDATA%\FareWiseTruck\settings.json</code>.</li>
-  <li><strong>Rate statements</strong> (printable HTML), created in <code>%APPDATA%\FareWiseTruck\reports\</code>
-      and opened in your browser.</li>
+      selected tariff, and the company name, address, phone number, invoice registration number and payment terms
+      you enter), at <code>%APPDATA%\FareWiseTruck\settings.json</code>.</li>
+  <li><strong>Your last entries</strong> (rate sheet conditions in <code>ratetable.json</code>; contract document type,
+      payment terms and the other party's name and address in <code>contract.json</code>) and the
+      <strong>window size and position</strong> (<code>window.ini</code>), all in <code>%APPDATA%\FareWiseTruck\</code>.</li>
+  <li><strong>Rate statements, rate sheets and contract documents</strong> (printable HTML), created in
+      <code>%APPDATA%\FareWiseTruck\reports\</code> and opened in your browser. If you choose to keep copies of issued
+      contract documents, the copies are saved in <code>%APPDATA%\FareWiseTruck\contracts\</code>.</li>
   <li><strong>Tariffs you add</strong> (JSON files you place in <code>%APPDATA%\FareWiseTruck\tariff\</code>).</li>
-  <li><strong>Files you ask it to save</strong> (quotes as CSV). You choose where they go.</li>
-  <li><strong>The clipboard</strong>, only when you press Copy information in the About box
-      (App version, Windows version, tariff notice numbers and the data folder).</li>
+  <li><strong>Files you ask it to save</strong> (CSV of quotes, rate sheets and bulk recalculation; PDF of rate
+      statements, rate sheets and contract documents). You choose where they go.</li>
+  <li><strong>The clipboard</strong>, only when you press Copy information in the About box (App version, Windows
+      version, tariff notice numbers and the data folder) or Copy as e-mail text in the contract document dialog
+      (the text of the document). The App never sends e-mail.</li>
 </ul>
 <p>
 In the Microsoft Store version, Windows may redirect the folder above to a folder private to the App
@@ -200,6 +216,9 @@ to choose the colors on screen and is neither stored nor transmitted.
 The App has no networking features. The only capability the package declares is
 <code>runFullTrust</code>, which is required for Win32 desktop applications.
 The manual and rate statements are files on your device opened in your browser without any network access.
+To create a PDF, the App starts the Microsoft Edge that ships with Windows without a window and has it print a local
+HTML file to PDF. It uses a new temporary Edge profile each time, does not touch your own Edge settings or history,
+and makes no network connection.
 Only when you choose the menu item that opens the Ministry's materials does your browser open the Ministry's
 web page; that connection is made by your browser and carries no information from the App.
 </p>
@@ -238,7 +257,7 @@ We may update this policy as needed. The latest version will be posted at
 <p>For questions about this policy or the App: G.Works.902@gmail.com</p>
 </div>
 
-<footer>&copy; 2026 G-Works &middot; FareWise Truck</footer>
+<footer>&copy; 2026 G-Works &middot; Farewise Truck</footer>
 
 </div>
 </body>
